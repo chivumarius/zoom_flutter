@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zoom_flutter/screens/login_screen.dart';
+import 'package:zoom_flutter/utils/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,15 +12,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // ♦ Removing the "banner":
+      debugShowCheckedModeBanner: false,
       title: 'Zoom Clone',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: backgroundColor,
       ),
-      home: const Center(
-          child: Text(
-        'Hello World!',
-        style: TextStyle(color: Colors.white),
-      )),
+
+      // ♦ The Aoo "Routes":
+      routes: {
+        '/login': (context) => const LoginScreen(),
+      },
+      home: const LoginScreen(),
     );
   }
 }
