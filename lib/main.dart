@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zoom_flutter/screens/home_screen.dart';
 import 'package:zoom_flutter/screens/login_screen.dart';
 import 'package:zoom_flutter/utils/colors.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       // ♦ The Aoo "Routes":
       routes: {
         '/login': (context) => const LoginScreen(),
+        '/home': (context) => const HomeScreen(),
       },
       home: const LoginScreen(),
     );
